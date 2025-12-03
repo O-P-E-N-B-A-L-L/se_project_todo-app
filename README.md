@@ -1,17 +1,17 @@
-# Simple Todo App
+# Project 4: The Simple To-Do App
 
-Give a brief description of the project here. Feel free to give it a different name.
+This to-do app is the 4th (mini) project through [TripleTen](https://tripleten.com/), a simple app for tracking various tasks and deadlines.
 
-## Functionality
+This app serves primarily as an intro to refactoring; Cleaning up old code, and organizing it in a smarter way using classes and modular files.
 
-Give a more detailed explanation of the project and its functionality.
+## Images
 
-## Technology
+To-Do rendered within a 1440px display:
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+![To-do app rendered within a 1920px display](./images/todo-1920px.png)
 
-## Deployment
+![To-do app rendered within a 1920px display](./images/new-todo-1920px.png)
 
-This project is deployed on GitHub Pages:
+## See it for yourself!
 
-- ADD LINK HERE
+You may view the site in action through my [GitHub Pages deployment](https://o-p-e-n-b-a-l-l.github.io/se_project_todo-app/).
