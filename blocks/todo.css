@@ -68,6 +68,12 @@
   font-weight: 500;
   color: #f44;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.todo__delete-btn:hover {
+  color: rgb(175, 0, 0);
+  cursor: pointer;
 }
 
 .todo__delete-btn::before {

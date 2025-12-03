@@ -69,6 +69,13 @@ class FormValidator {
 
   resetValidation() {
     this._formElement.reset();
+    this._inputList.forEach((inputElement) =>
+      this._hideInputError(inputElement)
+    );
+
+    // Explicitly disable button state -- Edge case where button is already disabled, but the _toggleButtonState() method is called anyways (enabling the button on a blank form)
+    this._buttonElement.classList.add(this._settings.inactiveButtonClass);
+    this._buttonElement.disabled = true;
   }
 }
 
