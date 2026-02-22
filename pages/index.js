@@ -14,11 +14,11 @@ const generateTodo = (data) => {
   const todo = new Todo({
     data: data,
     selector: "#todo-template",
-    handleCheck: (boolean) => {
-      todoCounter.updateCompleted(boolean);
+    handleCheck: (completed) => {
+      todoCounter.updateCompleted(completed);
     },
-    handleTotal: (boolean) => {
-      todoCounter.updateTotal(boolean);
+    handleTotal: (completed) => {
+      todoCounter.updateTotal(completed);
     },
   });
   const todoElement = todo.getView();

@@ -27,7 +27,7 @@ class FormValidator {
   }
 
   _hasInvalidInput() {
-    return this._inputList.some((inputElement) => {
+    return this._inputElements.some((inputElement) => {
       return !inputElement.validity.valid;
     });
   }
@@ -43,16 +43,16 @@ class FormValidator {
   }
 
   _setEventListeners() {
-    this._inputList = Array.from(
-      this._formElement.querySelectorAll(this._settings.inputSelector)
+    this._inputElements = Array.from(
+      this._formElement.querySelectorAll(this._settings.inputSelector),
     );
     this._buttonElement = this._formElement.querySelector(
-      this._settings.submitButtonSelector
+      this._settings.submitButtonSelector,
     );
 
     this._toggleButtonState();
 
-    this._inputList.forEach((inputElement) => {
+    this._inputElements.forEach((inputElement) => {
       inputElement.addEventListener("input", () => {
         this._checkInputValidity(inputElement);
         this._toggleButtonState();
@@ -69,8 +69,8 @@ class FormValidator {
 
   resetValidation() {
     this._formElement.reset();
-    this._inputList.forEach((inputElement) =>
-      this._hideInputError(inputElement)
+    this._inputElements.forEach((inputElement) =>
+      this._hideInputError(inputElement),
     );
 
     // Explicitly disable button state -- Edge case where button is already disabled, but the _toggleButtonState() method is called anyways (enabling the button on a blank form)
